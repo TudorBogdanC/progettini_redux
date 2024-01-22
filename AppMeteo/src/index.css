@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400;500;700;800&family=Tektur:wght@400;500;700&display=swap');
+
+/* SETTINGS GENERALI */
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.container {
+  max-width: 700px;
+  height:700px;
+  margin:auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0; 
+  font-family: 'Spectral' 'Sans serif';
+  
+}
+
+.app:before {
+  content:'';
+  background:url('./assets/images/sfondo_orto.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  top: 0;
+  left:0;
+  z-index:-1;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+p {
+  font-size: 1.6rem;
+  font-family: 'Spectral';
+}
+/* SEARCH BAR */
+.app .search {
+  text-align:center;
+  padding: 1rem;
+
+}
+
+.app input {
+   padding: .7rem 1.5rem;
+   font-size: 1.2rem;
+   border-radius: 25px;
+   border: 1px solid rgba(255, 255, 255, 0.8);
+   background: rgba(255,255,255,0.1);
+   color: #fff;
+   opacity:0.7;
+   font-family: 'Spectral';
+   width:80%;
+}
+
+::placeholder {
+   color: #f8f8f8;
+}
+
+
+/* SEZIONE TOP */
+h1 {
+  font-size:6rem;
+}
+.temp {
+  font-family: 'Tektur';
+  opacity: 0.6
+}
+
+.description {
+  opacity: 0.7;
+}
+.location p {
+  opacity: 0.5;
+  font-size: 35px;
+}
+
+.app .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.app .description {
+    position: relative;
+    right: -90%;
+    transform-origin: 0 0;
+    transform: rotate(270deg)
+}
+
+/* SEZIONE MIDDLE */
+.forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.app .middle {
+  padding:1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.1);
+  width:100%
+
+}
+
+/* SEZIONE BOTTOM */
+.bottom {
+  opacity: 0.7;
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.bold {
+  font-weight: 700;
+  font-family: 'Tektur' ;
+}
+
+small {
+  font-size: 12px
+}
+
+.dayOne, .dayTwo, .dayThree {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small {
+  font-size: 16px;
+  opacity: 0.7
+}
