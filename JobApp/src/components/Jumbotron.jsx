@@ -7,7 +7,7 @@ const Jumbotron = () => {
                 <div>
                     <h1 className="my-5 mx-4 fs-1 fw-bold" style={{color:"#839791"}}>Welcome to a new <br/> job seeking experience. </h1>
                     <p className="my-5 mx-4" style={{color:"#A8876F"}}>
-                        Here at <span className="fs-5 fw-bolder">Jobs on Hunt</span> we value your <span span className="fs-5 fw-bold fst-italic">time</span> and professional
+                        Here at <span className="fs-3 fw-bolder">Jobs on Hunt</span> we value your <span span className="fs-5 fw-bold fst-italic">time</span> and professional
                         experience. <br/> That is why we specialise in offering a <span span className="fs-5 fw-bolder fst-italic">tailored</span> service that
                         suits your job seeking needs. 
                         <br/>
