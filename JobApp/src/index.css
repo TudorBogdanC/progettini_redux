@@ -5,9 +5,59 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  background: linear-gradient(
+    45deg,
+    #EFD5C3,
+    #FFD4CA
+    
+  );
+  min-height: 100vh
+}
+
+.col-3 a {
+  color: #9c6360;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.col-9 a {
+  color: #8c4f4d;
+  font-weight: 500;
+}
+
+
+/* FAVOURITES PAGE */
+
+.list-group .list-group-item{
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+ .list-group-item a {
+  color:#8c4f4d;
+ }
+
+ .pippo {
+  display:flex;
+  justify-content: space-between;
+ }
+
+a.nav-link {
+  color:#8c4f4d;
+  font-weight: 500;
+  font-size: large;
+}
+
+.image {
+  border-radius: 25% 75%
+}
+

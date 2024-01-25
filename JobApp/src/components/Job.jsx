@@ -1,6 +1,6 @@
 import { Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { Star, StarFill } from 'react-bootstrap-icons'
+import { Heart, HeartFill } from 'react-bootstrap-icons'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   addToFavouriteAction,
@@ -20,19 +20,19 @@ const Job = ({ data }) => {
     >
       <Col xs={3}>
         {isFav ? (
-          <StarFill
-            color="gold"
+          <HeartFill
+            color="#896978"
             size={16}
-            className="mr-2 my-auto"
+            className="mx-2 my-auto"
             onClick={() =>
               dispatch(removeFromFavouriteAction(data.company_name))
             }
           />
         ) : (
-          <Star
-            color="gold"
+          <Heart
+            color="#896978"
             size={16}
-            className="mr-2 my-auto"
+            className="mx-2 my-auto"
             onClick={() => dispatch(addToFavouriteAction(data.company_name))}
           />
         )}

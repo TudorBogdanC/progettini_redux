@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Job from './Job'
 import { useSelector, useDispatch } from 'react-redux'
 import { getJobsAction } from '../redux/actions'
+import Jumbotron from './Jumbotron'
 
 const MainSearch = () => {
   const [query, setQuery] = useState('')
@@ -22,12 +23,13 @@ const MainSearch = () => {
     dispatch(getJobsAction(query))
   }
 
+
   return (
     <Container>
+      <Jumbotron/>
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1>Remote Jobs Search</h1>
-          <Button onClick={() => navigate('/favourites')}>Favourites</Button>
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
@@ -37,6 +39,7 @@ const MainSearch = () => {
               onChange={handleChange}
               placeholder="type and press Enter"
             />
+            
           </Form>
         </Col>
         <Col xs={10} className="mx-auto mb-5">
