@@ -1,154 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400;500;700;800&family=Tektur:wght@400;500;700&display=swap');
 
-/* SETTINGS GENERALI */
+
 * {
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  color: #F0E7D8;
+}
+
+body {
   margin:0;
   padding:0;
 }
 
+#root {
+  margin: 0;
+  padding:0;
+  font-family: 'Spectral', sans-serif;
+  background: linear-gradient(
+    40deg,
+    #4D5061,
+    #BA6E6E
+  );
+  min-height:100vh;
+}
+
 .container {
-  max-width: 700px;
-  height:700px;
-  margin:auto;
-  padding: 0 1rem;
-  position: relative;
-  top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin-top: 3rem;
 }
 
-body {
-  margin: 0; 
-  font-family: 'Spectral' 'Sans serif';
-  
-}
+/* NAVBAR */
 
-.app:before {
-  content:'';
-  background:url('./assets/images/sfondo_orto.jpg') no-repeat center center/cover;
-  position: absolute;
-  width: 100%;
-  height:100%;
-  top: 0;
-  left:0;
-  z-index:-1;
-}
-
-.app {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: rgba(0,0,0,0.4);
-  color: #fff;
-}
-
-p {
-  font-size: 1.6rem;
-  font-family: 'Spectral';
-}
-/* SEARCH BAR */
-.app .search {
-  text-align:center;
-  padding: 1rem;
-
-}
-
-.app input {
-   padding: .7rem 1.5rem;
-   font-size: 1.2rem;
-   border-radius: 25px;
-   border: 1px solid rgba(255, 255, 255, 0.8);
-   background: rgba(255,255,255,0.1);
-   color: #fff;
-   opacity:0.7;
-   font-family: 'Spectral';
-   width:80%;
-}
-
-::placeholder {
-   color: #f8f8f8;
-}
 
 
 /* SEZIONE TOP */
-h1 {
-  font-size:6rem;
-}
-.temp {
-  font-family: 'Tektur';
-  opacity: 0.6
+.top {
+  border-radius: 10% 90% 16% 84% / 68% 7% 93% 32%;
+  background: #48A9A6;      
+  margin-left:1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  width:max-content;
 }
 
 .description {
-  opacity: 0.7;
-}
-.location p {
-  opacity: 0.5;
-  font-size: 35px;
-}
-
-.app .top {
-  width: 100%;
-  margin: 1rem auto;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.app .description {
-    position: relative;
-    right: -90%;
-    transform-origin: 0 0;
-    transform: rotate(270deg)
+
+.description p {
+  margin-top: 1rem;
+}
+ .currentWeather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.upperSection {
+ display:flex;
+ flex-direction: row;
 }
 
 /* SEZIONE MIDDLE */
+.feel {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin-bottom:1rem;
+}
+
+.humidity {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom:1rem;
+}
+
+.wind {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom:1rem;
+}
+
+/* TERZA SEZIONE */
+
 .forecast {
+  border-radius: 10% 90% 16% 84% / 68% 7% 93% 32%;
+  padding: 2rem;
+  background: #48A9A6;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
-
-.app .middle {
-  padding:1rem;
-  margin: 1rem auto;
-  border-radius: 12px;
-  background-color: rgba(255,255,255,0.1);
-  width:100%
-
-}
-
-/* SEZIONE BOTTOM */
-.bottom {
-  opacity: 0.7;
-}
-
-.app .bottom {
-  display: flex;
+  align-items: center;
   justify-content: space-evenly;
-  text-align: center;
-  width: 100%;
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: rgba(255,255,255,0.1);
+  gap: 3rem;
 }
 
-.bold {
-  font-weight: 700;
-  font-family: 'Tektur' ;
-}
-
-small {
-  font-size: 12px
-}
-
-.dayOne, .dayTwo, .dayThree {
-  display:flex;
+.dayOne {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.small {
-  font-size: 16px;
-  opacity: 0.7
+.dayTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.dayThree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 576px) {
+  .forecast {
+    width:fit-content;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .forecast {
+    border-radius: 10% 90% 16% 84% / 68% 7% 93% 32%;
+  }}

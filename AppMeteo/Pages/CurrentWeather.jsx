@@ -17,13 +17,15 @@ Insieme fanno una ricerca su url diversi ma che condividono il parametro dinamic
 
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import Navbar from 'react-bootstrap/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { setWeatherData, setForecastData } from '../reducers/weatherSlice';
 
 
 function CurrentWeather() {
-  
+
   const [location, setLocation] = useState("");
   const dispatch = useDispatch();
   const { data: weather, forecast } = useSelector((state) => state.weather);
@@ -59,66 +61,91 @@ function CurrentWeather() {
   };
 
   return (
-    <div className="app">
-      <div className="search">
-        <input
-          value={location}
-          onChange={(e) => { setLocation(e.target.value) }}
-          placeholder='Enter location'
-          type="text"
-        />
-        <Button variant="transparent" onClick={() => handleSearch()}>🔎</Button>
-      </div>
+    <>
+        <Navbar sticky="top" expand="lg" style={{backgroundColor:"#4D5061"}}>
+      <Container fluid>
+        <Navbar.Brand style={{color:"#48A9A6"}} href="#">Meteo</Navbar.Brand>
+          <Form inline>
+                <Row className="d-flex align-items-center g-2">
+                  <Col xs="9">
+                    <Form.Control
+                      value={location}
+                      onChange={(e) => { setLocation(e.target.value) }}
+                      placeholder='Inserisci la tua città'
+                      type="text"
+                    />
+                  </Col>
+                  <Col xs="3">
+                  <Button variant="dark" size="sm" onClick={() => handleSearch()}>Cerca</Button>
+                  </Col>
+                </Row>
+              </Form>
+      </Container>
+    </Navbar>
       {weather != null && forecast != null && (
-        <div className="container">
-          <div className="top">
-            <div className="location">
-              <p>{weather?.name}</p>
-            </div>
-            <div className="temp">
-              <h1>{weather?.main?.temp.toFixed()}° C</h1>
-            </div>
-            <div className="description">
-              <p>{weather?.weather[0]?.description}</p>
-            </div>
-          </div>
-          <div className="middle">
-            <div className="forecast">
-              <div className="dayOne">
-                <p className="small">Oggi</p>
-                <small>
-                  <div><img src= {`https://openweathermap.org/img/wn/${forecast.list[0].weather[0].icon}@2x.png`} alt="" height={60}/></div>
-                </small>
+          <Container>
+            <Row className="upperSection">
+              <Col xs={8} lg={8}>
+                <div className="top">
+                  <div className="currentWeather">
+                    <div className="location">
+                      <p>{weather?.name}</p>
+                    </div>
+                    <div className="temp">
+                      <h1>{weather?.main?.temp.toFixed()}° C</h1>
+                    </div>
+                  </div>
+                  <div className="description">
+                    <img src={`https://openweathermap.org/img/wn/${weather?.weather[0]?.icon}@2x.png`} alt="" height={60} />
+                    <p>{weather?.weather[0]?.description}</p>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={4} lg={4}>
+                <div className="middle">
+                  <div className="feel">
+                    <small>Rugiada</small>
+                    <p className="bold"> {weather?.main?.feels_like.toFixed()}° C</p>
+                  </div>
+                  <div className="humidity">
+                    <small>Umidità</small>
+                    <p className="bold">{weather?.main?.humidity} %</p>
+                  </div>
+                  <div className="wind">
+                    <small>Vento</small>
+                    <p className="bold">{weather?.wind?.speed.toFixed()} km/h</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Col className="my-5 mx-3 d-flex flex-column">
+            <small>Previsioni a breve termine</small>
+            <br/>
+              <div className="bottom">
+                <div className="forecast">
+                  <div className="dayOne">
+                    <p className="small">Oggi</p>
+                    <small>
+                      <div><img src={`https://openweathermap.org/img/wn/${forecast.list[0].weather[0].icon}@2x.png`} alt="" height={60} /></div>
+                    </small>
+                  </div>
+                  <div className="dayTwo">
+                    <p className="small">Domani</p>
+                    <small>
+                      <div><img src={`https://openweathermap.org/img/wn/${forecast.list[8].weather[0].icon}@2x.png`} alt="" height={60} /></div>
+                    </small>
+                  </div>
+                  <div className="dayThree">
+                    <p className="small">Dopodomani</p>
+                    <div><img src={`https://openweathermap.org/img/wn/${forecast.list[16].weather[0].icon}@2x.png`} alt="" height={60} /></div>
+                  </div>
+                </div>
               </div>
-              <div className="dayTwo">
-                <p className="small">Domani</p>
-                <small>
-                <div><img src= {`https://openweathermap.org/img/wn/${forecast.list[8].weather[0].icon}@2x.png`} alt="" height={60}/></div>
-                </small>
-              </div>
-              <div className="dayThree">
-                <p className="small">Dopodomani</p>
-                <div><img src= {`https://openweathermap.org/img/wn/${forecast.list[16].weather[0].icon}@2x.png`} alt="" height={60}/></div>
-              </div>
-            </div>
-          </div>
-          <div className="bottom">
-            <div className="feel">
-              <p className="bold"> {weather?.main?.feels_like.toFixed()}° C</p>
-              <small>Rugiada</small>
-            </div>
-            <div className="humidity">
-              <p className="bold">{weather?.main?.humidity} %</p>
-              <small>Umidità</small>
-            </div>
-            <div className="wind">
-              <p className="bold">{weather?.wind?.speed.toFixed()} km/h</p>
-              <small>Vento</small>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+            </Col>
+          </Container>
+        )
+      }
+    </>
   );
 }
 
