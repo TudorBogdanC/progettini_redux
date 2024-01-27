@@ -12,7 +12,7 @@ const Jumbotron = () => {
                         suits your job seeking needs. 
                         <br/>
                         <br/>
-                        Tired of your old job? Trying to try a new field of specialization? 
+                        Tired of your old job? Trying to make yourself way into a new field of specialisation? 
                         In search of your first work experience? We've got you covered.
                     </p>
                 </div>
