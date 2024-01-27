@@ -17,7 +17,7 @@ Insieme fanno una ricerca su url diversi ma che condividono il parametro dinamic
 
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row} from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { setWeatherData, setForecastData } from '../reducers/weatherSlice';
 import CustomNavbar from '../components/CustomNavbar';
