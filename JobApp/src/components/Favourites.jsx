@@ -3,7 +3,7 @@ import {
   Row,
   Col,
   ListGroup,
-  ListGroupItem,
+
 } from 'react-bootstrap'
 import { HeartFill } from 'react-bootstrap-icons'
 import { useSelector, useDispatch } from 'react-redux'
@@ -25,7 +25,8 @@ const Favourites = () => {
         <Col xs={10} className="mx-auto my-3">
           <ListGroup>
             {favourites.map((fav, i) => (
-              <ListGroup.Item className="itemList" key={i}>
+              <ListGroup.Item key={i} className="mx-0 mt-3 p-3"
+              style={{ border: '1px solid #074F57', borderRadius: 150, backgroundColor:"#074F57" }}>
                 <HeartFill
                   color="#E4C5AF"
                   className="mx-2"

@@ -7,7 +7,7 @@ function CustomNavbar() {
   return (
     <Navbar
       sticky="top"
-      style={{ backgroundColor: "#74A57F", marginBottom: "50px" }}
+      style={{ backgroundColor: "#07B4BD", marginBottom: "50px" }}
     >
       <Container className="pippo">
         <div>

@@ -52,14 +52,11 @@ code {
  }
 
 a.nav-link {
-  color:#074F57;
+  color: #074F57;
   font-weight: 600;
   font-size: 1rem;
 }
 
-a.nav-link-active {
-  color:aliceblue;
-}
 
 .image {
   border-radius: 25% 75%

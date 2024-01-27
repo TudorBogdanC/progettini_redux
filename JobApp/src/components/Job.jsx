@@ -16,7 +16,7 @@ const Job = ({ data }) => {
   return (
     <Row
       className="mx-0 mt-3 p-3"
-      style={{ border: '1px solid #00000033', borderRadius: 4 }}
+      style={{ border: '1px solid #074F57', borderRadius: 150, backgroundColor:"#074F57" }}
     >
       <Col xs={3}>
         {isFav ? (
