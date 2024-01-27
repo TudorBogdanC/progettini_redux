@@ -19,7 +19,7 @@ const Favourites = () => {
   return (
     <Container>
       <Row>
-        <Col xs={10} className="mx-auto my-3">
+        <Col xs={10} className="mx-auto my-3" style={{color:"#E4C5AF"}}>
           <h1>Favourites</h1>
         </Col>
         <Col xs={10} className="mx-auto my-3">
@@ -27,7 +27,7 @@ const Favourites = () => {
             {favourites.map((fav, i) => (
               <ListGroup.Item className="itemList" key={i}>
                 <HeartFill
-                  color="#896978"
+                  color="#E4C5AF"
                   className="mx-2"
                   onClick={() => dispatch(removeFromFavouriteAction(fav))}
                 />
