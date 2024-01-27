@@ -21,7 +21,7 @@ body {
     #4D5061,
     #BA6E6E
   );
-  min-height:100vh;
+  min-height:120vh;
 }
 
 .container {
@@ -35,15 +35,18 @@ body {
 /* SEZIONE TOP */
 .top {
   background: #48A9A6;
-  border-radius: 20% 45%;      
+  border-radius: 20% 45%;  
   margin-left:1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: justify;
-  width:max-content;
+  width: fit-content;
+  
 }
+
+
 
 .description {
   display:flex;
@@ -51,6 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 
@@ -61,6 +65,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
  
 }
 
@@ -70,6 +77,9 @@ body {
 }
 
 /* SEZIONE MIDDLE */
+.middle {
+  margin-top: 2rem;
+}
 .feel {
    display: flex;
    flex-direction: column;
@@ -93,14 +103,14 @@ body {
 
 /* TERZA SEZIONE */
 
-.forecast {
+.carousel-inner{
+  margin-top: 8rem;
   padding: 2rem;
   background: #48A9A6;
+  border-radius: 20% 45%; 
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 3rem;
 }
 
 .dayOne {
@@ -130,3 +140,6 @@ body {
   }
 }
 
+.carousel-indicators {
+  display:none;
+}
