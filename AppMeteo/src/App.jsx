@@ -1,10 +1,11 @@
-import CurrentWeather from "../Pages/CurrentWeather"
+import CustomMain from "../Pages/CustomMain"
+
 
 
 const App = () => {
     return (
         <>
-          <CurrentWeather/>
+          <CustomMain/>
         </>
     )
 }

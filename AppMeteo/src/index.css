@@ -34,8 +34,8 @@ body {
 
 /* SEZIONE TOP */
 .top {
-  border-radius: 10% 90% 16% 84% / 68% 7% 93% 32%;
-  background: #48A9A6;      
+  background: #48A9A6;
+  border-radius: 20% 45%;      
   margin-left:1rem;
   padding: 1rem;
   display: flex;
@@ -94,7 +94,6 @@ body {
 /* TERZA SEZIONE */
 
 .forecast {
-  border-radius: 10% 90% 16% 84% / 68% 7% 93% 32%;
   padding: 2rem;
   background: #48A9A6;
   display: flex;
@@ -131,7 +130,3 @@ body {
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .forecast {
-    border-radius: 10% 90% 16% 84% / 68% 7% 93% 32%;
-  }}
