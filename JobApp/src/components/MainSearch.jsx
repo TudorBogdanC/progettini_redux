@@ -28,7 +28,7 @@ const MainSearch = () => {
     <Container>
       <Jumbotron/>
       <Row>
-        <Col xs={10} className="mx-auto my-3">
+        <Col xs={10} className="mx-auto my-3" style={{color:"#E4C5AF"}}>
           <h1>Remote Jobs Search</h1>
         </Col>
         <Col xs={10} className="mx-auto">

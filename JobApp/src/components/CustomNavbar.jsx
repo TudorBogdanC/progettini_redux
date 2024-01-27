@@ -7,11 +7,11 @@ function CustomNavbar() {
   return (
     <Navbar
       sticky="top"
-      style={{ backgroundColor: "#839791", marginBottom: "50px" }}
+      style={{ backgroundColor: "#74A57F", marginBottom: "50px" }}
     >
-      <Container className="pippo" style={{color:"#896978"}}>
+      <Container className="pippo">
         <div>
-            <Navbar.Brand>Jobs On Hunt</Navbar.Brand>
+            <Navbar.Brand style={{color:"#074F57", fontSize:"25px", fontWeight:"bold"}}>Jobs On Hunt</Navbar.Brand>
         </div>
         <div>
           <Nav className="me-5 gap-5">

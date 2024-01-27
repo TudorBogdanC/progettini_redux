@@ -21,7 +21,7 @@ const Job = ({ data }) => {
       <Col xs={3}>
         {isFav ? (
           <HeartFill
-            color="#896978"
+            color="#E4C5AF"
             size={16}
             className="mx-2 my-auto"
             onClick={() =>
@@ -30,7 +30,7 @@ const Job = ({ data }) => {
           />
         ) : (
           <Heart
-            color="#896978"
+            color="#E4C5AF"
             size={16}
             className="mx-2 my-auto"
             onClick={() => dispatch(addToFavouriteAction(data.company_name))}

@@ -16,21 +16,21 @@ code {
 #root {
   background: linear-gradient(
     45deg,
-    #EFD5C3,
-    #FFD4CA
+    #074F57,
+    #077187
     
   );
   min-height: 100vh
 }
 
 .col-3 a {
-  color: #9c6360;
+  color: #E4C5AF;
   text-decoration: none;
   font-weight: 500;
 }
 
 .col-9 a {
-  color: #8c4f4d;
+  color: #E4C5AF;
   font-weight: 500;
 }
 
@@ -43,7 +43,7 @@ code {
   border-radius: 4px;
 }
  .list-group-item a {
-  color:#8c4f4d;
+  color: #E4C5AF;
  }
 
  .pippo {
@@ -52,9 +52,13 @@ code {
  }
 
 a.nav-link {
-  color:whitesmoke;
-  font-weight: 500;
-  font-size: larger;
+  color:#074F57;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+a.nav-link-active {
+  color:aliceblue;
 }
 
 .image {
