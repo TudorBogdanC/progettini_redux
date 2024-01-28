@@ -17,12 +17,14 @@ Insieme fanno una ricerca su url diversi ma che condividono il parametro dinamic
 
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row} from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { setWeatherData, setForecastData } from '../reducers/weatherSlice';
 import CustomNavbar from '../components/CustomNavbar';
 import CurrentWeather from '../components/CurrentWeather';
 import ForecastWeather from '../components/ForecastWeather';
+import WeatherChart from '../components/WeatherChart';
+
 
 
 function CustomMain() {
@@ -60,17 +62,20 @@ function CustomMain() {
       fetchForecast();
     }
   };
-
   return (
     <>
       <CustomNavbar location={location} setLocation={setLocation} handleSearch={handleSearch} />
-      {weather != null && forecast != null && (
-          <Container>
+      {weather != null && forecast != null  && (
+          <Container className="app">
             <Row className="upperSection">
               <CurrentWeather weather={weather}/>
             </Row>
-            <ForecastWeather forecast={forecast}/>
+            <Row>
+              <Col sm={6} md={6} lg={4}><ForecastWeather forecast={forecast}/></Col>
+              <Col sm={6} md={6} lg={8} className="chartTemp"><WeatherChart forecast={forecast}/></Col>
+            </Row>
           </Container>
+          
         )
       }
     </>

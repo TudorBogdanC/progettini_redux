@@ -21,12 +21,13 @@ body {
     #4D5061,
     #BA6E6E
   );
-  min-height:120vh;
+  min-height:100vh;
 }
 
-.container {
-  margin-top: 3rem;
+.app {
+  margin-top: 2rem;
 }
+
 
 /* NAVBAR */
 
@@ -34,16 +35,18 @@ body {
 
 /* SEZIONE TOP */
 .top {
-  background: #48A9A6;
+  display: flex;
+  flex-direction: column;
+  background: rgba(77, 80, 97, 0.5);
   border-radius: 20% 45%;  
   margin-left:1rem;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: justify;
-  width: fit-content;
-  
+  width:min-content;
+  height:fit-content;
 }
 
 
@@ -55,6 +58,7 @@ body {
   justify-content: center;
   text-align: center;
   margin-bottom: 3rem;
+  
 }
 
 
@@ -71,12 +75,39 @@ body {
  
 }
 
+.location p {
+  color: #48a9a6fd;
+  font-weight: 500;
+  font-size: 3rem;
+} 
 .upperSection {
+ margin-top: 1rem;
  display:flex;
  flex-direction: row;
 }
 
-/* SEZIONE MIDDLE */
+
+.fixedCities {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 3.5rem -4.5rem;
+}
+
+.fixedCity {
+  background: rgba(77, 80, 97, 0.5);
+  border-radius: 20% 45% ;
+  margin: 10px;
+  padding: 1rem;
+}
+
+.fixedCity h4 {
+  color: #48a9a6fd;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* SEZIONE MIDDLE
 .middle {
   margin-top: 2rem;
 }
@@ -99,14 +130,16 @@ body {
   flex-direction: column;
   text-align: center;
   margin-bottom:1rem;
-}
+} */
 
 /* TERZA SEZIONE */
+
+
 
 .carousel-inner{
   margin-top: 8rem;
   padding: 2rem;
-  background: #48A9A6;
+  background: rgba(77, 80, 97, 0.5);
   border-radius: 20% 45%; 
   display: flex;
   flex-direction: row;
@@ -118,6 +151,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.smallTitle {
+  color: #48a9a6fd;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .dayTwo {
@@ -143,3 +182,18 @@ body {
 .carousel-indicators {
   display:none;
 }
+
+.chartTemp {
+  margin-top: 8rem;
+}
+
+@media only screen and (min-width: 375px) and (max-width:1020px) {
+  .chartTemp {
+   display: none;
+  }
+  .fixedCities {
+    display: none;
+  }
+ 
+}
+

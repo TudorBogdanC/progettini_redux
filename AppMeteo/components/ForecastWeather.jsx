@@ -6,7 +6,7 @@ const ForecastWeather = ({ forecast }) => {
       <Carousel>
         <Carousel.Item>
           <div className="dayOne">
-            <p className="small">Oggi</p>
+            <p className="smallTitle">Oggi</p>
             <small>
               <img
                 src={`https://openweathermap.org/img/wn/${forecast.list[0].weather[0].icon}@2x.png`}
@@ -14,13 +14,13 @@ const ForecastWeather = ({ forecast }) => {
                 height={100}
               />
             </small>
-            <p>Min / Max</p>
-            <p>{forecast?.list[0].main.temp_min.toFixed()}° C / {forecast?.list[0].main.temp_max.toFixed()}° C </p>
+            <h4>Min / Max</h4>
+            <h4>{forecast?.list[0].main.temp_min.toFixed()}° C / {forecast?.list[0].main.temp_max.toFixed()}° C </h4>
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="dayTwo">
-            <p className="small">Domani</p>
+            <p className="smallTitle">Domani</p>
             <small>
               <img
                 src={`https://openweathermap.org/img/wn/${forecast.list[8].weather[0].icon}@2x.png`}
@@ -28,13 +28,13 @@ const ForecastWeather = ({ forecast }) => {
                 height={100}
               />
             </small>
-            <p>Min / Max</p>
-            <p>{forecast?.list[8].main.temp_min.toFixed()}° C / {forecast?.list[8].main.temp_max.toFixed()}° C </p>
+            <h4>Min / Max</h4>
+            <h4>{forecast?.list[8].main.temp_min.toFixed()}° C / {forecast?.list[8].main.temp_max.toFixed()}° C </h4>
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="dayThree">
-            <p className="small">Dopodomani</p>
+            <p className="smallTitle">Dopodomani</p>
             <small>
             <img
               src={`https://openweathermap.org/img/wn/${forecast.list[16].weather[0].icon}@2x.png`}
@@ -42,8 +42,8 @@ const ForecastWeather = ({ forecast }) => {
               height={100}
             />
             </small>
-            <p>Min / Max</p>
-            <p>{forecast?.list[16].main.temp_min.toFixed()}° C / {forecast?.list[16].main.temp_max.toFixed()}° C </p>
+            <h4>Min / Max</h4>
+            <h4>{forecast?.list[16].main.temp_min.toFixed()}° C / {forecast?.list[16].main.temp_max.toFixed()}° C </h4>
           </div>
         </Carousel.Item>
       </Carousel>

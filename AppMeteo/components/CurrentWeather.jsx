@@ -1,14 +1,17 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import OtherCity from './OtherCity';
+
+
 
 
 const CurrentWeather = ({ weather }) => {
     return (
         <>
             <Container>
-                <Row className="upperSection">
-                    <Col xs={8} lg={8}>
+                <Row className="upperSection flex-sm-row flex-md-row flex-lg-row">
+                    <Col xs={8} sm={6} lg={6} md={6} xl={6}>
                         <div className="top">
                             <div className="currentWeather">
                                 <div className="location">
@@ -19,26 +22,13 @@ const CurrentWeather = ({ weather }) => {
                                 </div>
                             </div>
                             <div className="description">
-                                <img src={`https://openweathermap.org/img/wn/${weather?.weather[0]?.icon}@2x.png`} alt="" height={60} />
-                                <p>{weather?.weather[0]?.description}</p>
+                                <img src={`https://openweathermap.org/img/wn/${weather?.weather[0]?.icon}@2x.png`} alt="" height={120} />
+                                <h5>{weather?.weather[0]?.description}</h5>
                             </div>
                         </div>
                     </Col>
-                    <Col xs={4} lg={4}>
-                        <div className="middle">
-                            <div className="feel">
-                                <small>Rugiada</small>
-                                <p className="bold"> {weather?.main?.feels_like.toFixed()}° C</p>
-                            </div>
-                            <div className="humidity">
-                                <small>Umidità</small>
-                                <p className="bold">{weather?.main?.humidity} %</p>
-                            </div>
-                            <div className="wind">
-                                <small>Vento</small>
-                                <p className="bold">{weather?.wind?.speed.toFixed()} km/h</p>
-                            </div>
-                        </div>
+                    <Col  xs={4} sm={6} lg={6} md={6} xl={6} className="fixedCities">
+                        <OtherCity/>
                     </Col>
                 </Row>
             </Container>
